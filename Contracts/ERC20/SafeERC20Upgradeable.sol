@@ -4,7 +4,7 @@
 pragma solidity ^0.8.0;
 
 import "./IERC20Upgradeable.sol";
-import "./AddressUpgradeable.sol";
+import ".././utils/AddressUpgradeable.sol";
 
 /**
  * @title SafeERC20Upgradeable
@@ -15,11 +15,11 @@ import "./AddressUpgradeable.sol";
  * To use this library you can add a `using SafeERC20Upgradeable for IERC20Upgradeable;` statement to your contract,
  * which allows you to call the safe operations as `token.safeTransfer(...)`, etc.
  */
-library SafeERC20UpgradeableUpgradeable {
+library SafeERC20pgradeable {
     using AddressUpgradeable for address;
 
     function safeTransfer(
-        IERC20UpgradeableUpgradeable token,
+        IERC20Upgradeable token,
         address to,
         uint256 value
     ) internal {
@@ -27,7 +27,7 @@ library SafeERC20UpgradeableUpgradeable {
     }
 
     function safeTransferFrom(
-        IERC20UpgradeableUpgradeable token,
+        IERC20Upgradeable token,
         address from,
         address to,
         uint256 value
@@ -43,7 +43,7 @@ library SafeERC20UpgradeableUpgradeable {
      * {safeDecreaseAllowance} instead.
      */
     function safeApprove(
-        IERC20UpgradeableUpgradeable token,
+        IERC20Upgradeable token,
         address spender,
         uint256 value
     ) internal {
@@ -58,7 +58,7 @@ library SafeERC20UpgradeableUpgradeable {
     }
 
     function safeIncreaseAllowance(
-        IERC20UpgradeableUpgradeable token,
+        IERC20Upgradeable token,
         address spender,
         uint256 value
     ) internal {
@@ -67,7 +67,7 @@ library SafeERC20UpgradeableUpgradeable {
     }
 
     function safeDecreaseAllowance(
-        IERC20UpgradeableUpgradeable token,
+        IERC20Upgradeable token,
         address spender,
         uint256 value
     ) internal {
@@ -85,7 +85,7 @@ library SafeERC20UpgradeableUpgradeable {
      * @param token The token targeted by the call.
      * @param data The call data (encoded using abi.encode or one of its variants).
      */
-    function _callOptionalReturn(IERC20UpgradeableUpgradeable token, bytes memory data) private {
+    function _callOptionalReturn(IERC20Upgradeable token, bytes memory data) private {
         // We need to perform a low level call here, to bypass Solidity's return data size checking mechanism, since
         // we're implementing it ourselves. We use {Address.functionCall} to perform this call, which verifies that
         // the target address contains contract code and also asserts for success in the low-level call.

@@ -1,9 +1,9 @@
 // SPDX-License-Identifier: MIT
 pragma solidity ^0.8.0;
 
-import "./ERC20Upgradeable.sol";
-import "./SafeMathUpgradeable.sol";
-import "./SafeERC20Upgradeable.sol";
+import "./ERC20/ERC20Upgradeable.sol";
+import "./utils/SafeMathUpgradeable.sol";
+import "./ERC20/SafeERC20Upgradeable.sol";
 
 
 /**
@@ -20,7 +20,7 @@ import "./SafeERC20Upgradeable.sol";
  */
 contract Crowdsale {
   using SafeMathUpgradeable for uint256;
-  using SafeERC20UpgradeableUpgradeable for ERC20Upgradeable;
+  using SafeERC20pgradeable for ERC20Upgradeable;
 
   // The token being sold
   ERC20Upgradeable public token;
